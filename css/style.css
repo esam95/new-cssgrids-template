@@ -14,9 +14,187 @@ section {
 	display: grid;
 	width: 89.5%;
 	margin: 0 auto;
-	grid-template-columns: repeat(4, 1fr);
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-areas: 
+		"header header header header header header header header header header header header"
+		"box1 box1 box2 box2 box2 box2 box2 box2 box2 box2 box3 box3"
+		"content content content content content content content content content sidebar sidebar sidebar"
+		"footer footer footer footer footer footer footer footer footer footer footer footer";
 	
 	column-gap: 2%;
 	row-gap: 20px;
 
+}
+
+.header {
+	grid-area: header;
+}
+
+.box1 {
+	grid-area: box1;
+}
+
+.box2 {
+	grid-area: box2;
+}
+
+.box3 {
+	grid-area: box3;
+}
+
+.content {
+	grid-area: content;
+}
+
+.sidebar {
+	grid-area: sidebar;
+}
+
+.footer-section1 {
+	grid-area: footer-section1;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-left: 5px;
+}
+.footer-section2 {
+	grid-area: footer-section2;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+.footer-section3 {
+	grid-area: footer-section3;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+.footer-section4 {
+	grid-area: footer-section4;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-right: 5px;
+}
+
+.footer {
+	display: grid;
+	column-gap: 2%;
+
+	grid-area: footer;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-areas: "footer-section1 footer-section2 footer-section3 footer-section4";
+}
+
+@media screen and (max-width: 1200px) {
+	#container {
+		display: grid;
+		width: 89.5%;
+		margin: 0 auto;
+		grid-template-columns: repeat(12, 1fr);
+		grid-template-areas: 
+			"header header header header header header header header header header header header"
+			"box1 box1 box1 box2 box2 box2 box2 box2 box2 box3 box3 box3"
+			"content content content content content content content content sidebar sidebar sidebar sidebar"
+			"footer footer footer footer footer footer footer footer footer footer footer footer";
+		
+		column-gap: 2%;
+		row-gap: 20px;
+	
+	}
+}
+
+@media screen and (max-width: 960px) {
+	#container {
+		display: grid;
+		width: 89.5%;
+		margin: 0 auto;
+		grid-template-columns: repeat(12, 1fr);
+		grid-template-areas: 
+			"header header header header header header header header header header header header"
+			"box1 box1 box1 box1 box2 box2 box2 box2 box3 box3 box3 box3"
+			"content content content content content content sidebar sidebar sidebar sidebar sidebar sidebar"
+			"footer footer footer footer footer footer" 
+			"footer footer footer footer footer footer";
+		
+		column-gap: 2%;
+		row-gap: 20px;
+	
+	}
+
+	.footer {
+		display: grid;
+		column-gap: 2%;
+		row-gap: 0,5%;
+	
+		grid-area: footer;
+		grid-template-columns: 1fr 1fr;
+		grid-template-areas: 
+		"footer-section1 footer-section2" 
+		"footer-section3 footer-section4";
+	}
+
+	.footer-section1 {
+		grid-area: footer-section1;
+		margin-top: 5px;
+		margin-bottom: 5px;
+		margin-left: 5px;
+	}
+	.footer-section2 {
+		grid-area: footer-section2;
+		margin-top: 5px;
+		margin-bottom: 5px;
+		margin-right: 5px;
+	}
+	.footer-section3 {
+		grid-area: footer-section3;
+		margin-top: 5px;
+		margin-bottom: 5px;
+		margin-left: 5px;
+	}
+	.footer-section4 {
+		grid-area: footer-section4;
+		margin-top: 5px;
+		margin-bottom: 5px;
+		margin-right: 5px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	#container {
+		display: grid;
+		width: 89.5%;
+		margin: 0 auto;
+		grid-template-columns: repeat(12, 1fr);
+		grid-template-areas: 
+			"header header header header header header header header header header header header"
+			"box1 box1 box1 box1 box1 box1 box1 box1 box1 box1 box1 box1"
+			"box2 box2 box2 box2 box2 box2 box2 box2 box2 box2 box2 box2"
+			"box3 box3 box3 box3 box3 box3 box3 box3 box3 box3 box3 box3"
+			"content content content content content content content content content content content content"
+			"sidebar sidebar sidebar sidebar sidebar sidebar sidebar sidebar sidebar sidebar sidebar sidebar"
+			"footer footer footer footer footer footer footer footer footer footer footer footer"
+			"footer footer footer footer footer footer footer footer footer footer footer footer"
+			"footer footer footer footer footer footer footer footer footer footer footer footer"
+			"footer footer footer footer footer footer footer footer footer footer footer footer";
+		
+		column-gap: 2%;
+		row-gap: 20px;
+	
+	}
+	.footer {
+		display: grid;
+		row-gap: 0,1%;
+	
+		grid-area: footer;
+		grid-template-columns: 1fr;
+		grid-template-areas: 
+		"footer-section1" 
+		"footer-section2" 
+		"footer-section3" 
+		"footer-section4";
+	}
+
+	.footer-section1, .footer-section2, .footer-section3, .footer-section4 {
+		margin-top: 5px;
+		margin-bottom: 5px;
+		margin-right: 5px;
+		margin-left: 5px;
+	}
 }
