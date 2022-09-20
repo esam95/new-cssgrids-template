@@ -14,15 +14,17 @@ section {
 	display: grid;
 	width: 89.5%;
 	margin: 0 auto;
-	grid-template-columns: repeat(12, 1fr);
+	 grid-template-columns: repeat(12, 1fr);
 	grid-template-areas: 
 		"header header header header header header header header header header header header"
 		"box1 box1 box2 box2 box2 box2 box2 box2 box2 box2 box3 box3"
 		"content content content content content content content content content sidebar sidebar sidebar"
-		"footer footer footer footer footer footer footer footer footer footer footer footer";
+		"footer footer footer footer footer footer footer footer footer footer footer footer"; 
 	
 	column-gap: 2%;
 	row-gap: 20px;
+
+	grid-template-columns: repeat(12, 1fr);
 
 }
 
@@ -110,9 +112,9 @@ section {
 			"header header header header header header header header header header header header"
 			"box1 box1 box1 box1 box2 box2 box2 box2 box3 box3 box3 box3"
 			"content content content content content content sidebar sidebar sidebar sidebar sidebar sidebar"
-			"footer footer footer footer footer footer" 
-			"footer footer footer footer footer footer";
-		
+			"footer footer footer footer footer footer footer footer footer footer footer footer" 
+			"footer footer footer footer footer footer footer footer footer footer footer footer";
+	
 		column-gap: 2%;
 		row-gap: 20px;
 	
@@ -197,4 +199,4 @@ section {
 		margin-right: 5px;
 		margin-left: 5px;
 	}
-}
+} 
